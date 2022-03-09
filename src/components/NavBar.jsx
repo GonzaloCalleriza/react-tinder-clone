@@ -2,10 +2,11 @@ import React from 'react';
 import logo from '../images/logo-standard.png';
 import whiteLogo from '../images/logo-white.png';
 
-const NavBar = ({ minimal, authToken, setShowModal, showModal }) => {
+const NavBar = ({ minimal, authToken, setShowModal, showModal, setIsSignUp  }) => {
 
     const handleClick = () => {
         setShowModal(true)
+        setIsSignUp(false)
     }
 
     return (
