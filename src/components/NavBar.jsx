@@ -2,8 +2,11 @@ import React from 'react';
 import logo from '../images/logo-standard.png';
 import whiteLogo from '../images/logo-white.png';
 
-const NavBar = ({ minimal, authToken }) => {
+const NavBar = ({ minimal, authToken, setShowModal, showModal }) => {
 
+    const handleClick = () => {
+        setShowModal(true)
+    }
 
     return (
         <nav>
@@ -12,7 +15,9 @@ const NavBar = ({ minimal, authToken }) => {
                     src={minimal ? logo : whiteLogo} 
                     alt='logo'/>
             </div>
-            {!authToken && !minimal && <button className='nav-button'>Log In</button>}
+            {!authToken && !minimal && <button className='nav-button' onClick={handleClick} disabled={showModal}>
+                    Log In
+                </button>}
         </nav>
     );
 }

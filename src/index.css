@@ -47,6 +47,11 @@ nav .nav-button {
   margin: 10px;
 }
 
+nav .nav-button:disabled {
+  background-color: rgb(189, 180, 180);
+  color: rgb(160, 38, 75)
+}
+
 /* -------- Home --------- */
 .overlay {
   width: 100vw;
@@ -56,4 +61,17 @@ nav .nav-button {
       to bottom,
       rgba(0, 0, 0, 0.65) 0%,
       rgba(0, 0, 0, 0) 100%)
+}
+
+/* -------- Auth Modal --------- */
+.auth-modal {
+  position: absolute;
+  top: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 360px;
+  height: 600px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 40px;
 }
